@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		4AD356C2162D7486540A47BE /* Pods_TestExtensionUI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestExtensionUI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CD3DBA991EA0AA02E698E31 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5CD3DBA991EA0AA02E698E31 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TestExtensionUI_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestExtensionUI_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,9 +41,9 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6A2A7AA4A5B143B12FDD6D33 /* Pods-TestExtensionUI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestExtensionUI_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestExtensionUI_Example/Pods-TestExtensionUI_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		8BB9BB93693E67680580D90A /* TestExtensionUI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TestExtensionUI.podspec; path = ../TestExtensionUI.podspec; sourceTree = "<group>"; };
+		8BB9BB93693E67680580D90A /* TestExtensionUI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TestExtensionUI.podspec; path = ../TestExtensionUI.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C866121839581986FFFC44C7 /* Pods-TestExtensionUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestExtensionUI_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestExtensionUI_Example/Pods-TestExtensionUI_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D3C678EE9FDD23C03ABF34A0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D3C678EE9FDD23C03ABF34A0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DBCFEEFE58255AE7E1A0D0B3 /* Pods-TestExtensionUI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestExtensionUI_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestExtensionUI_Tests/Pods-TestExtensionUI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F30D8DFE63C80E83F8516A71 /* Pods-TestExtensionUI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestExtensionUI_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestExtensionUI_Tests/Pods-TestExtensionUI_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FB8C06817FFFCAFBD8C65EA7 /* Pods_TestExtensionUI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestExtensionUI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,10 +213,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = HN5JTUZ884;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = HN5JTUZ884;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -343,12 +345,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestExtensionUI_Example/Pods-TestExtensionUI_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/TestExtensionUI/TestExtensionUI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TestExtensionUI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -497,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -510,13 +514,16 @@
 			baseConfigurationReference = 6A2A7AA4A5B143B12FDD6D33 /* Pods-TestExtensionUI_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HN5JTUZ884;
 				INFOPLIST_FILE = TestExtensionUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -525,13 +532,16 @@
 			baseConfigurationReference = C866121839581986FFFC44C7 /* Pods-TestExtensionUI_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HN5JTUZ884;
 				INFOPLIST_FILE = TestExtensionUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -539,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DBCFEEFE58255AE7E1A0D0B3 /* Pods-TestExtensionUI_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HN5JTUZ884;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -561,6 +572,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F30D8DFE63C80E83F8516A71 /* Pods-TestExtensionUI_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = HN5JTUZ884;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

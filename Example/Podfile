@@ -1,7 +1,10 @@
 use_frameworks!
 
+platform :ios, '10.0'
+
 target 'TestExtensionUI_Example' do
   pod 'TestExtensionUI', :path => '../'
+  pod 'Kingfisher', '~> 5.2'
 
   target 'TestExtensionUI_Tests' do
     inherit! :search_paths
